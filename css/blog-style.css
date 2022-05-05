@@ -355,10 +355,9 @@ article blockquote cite:before{
 
 @media only screen and (min-width: 1170px) {
     .navbar-custom {
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
     }
     .navbar-custom.is-fixed .nav li a,
     .navbar-custom.is-fixed .navbar-brand {
@@ -718,6 +717,11 @@ form .row:first-child .floating-label-form-group {
     background: #0085a1;
 }
 
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
 img::selection {
     color: white;
     background: transparent;
@@ -978,13 +982,11 @@ img::-moz-selection {
     width: 100%;
     height: 100%;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     display: -webkit-flex;
     -webkit-align-items: center;
     -webkit-justify-content: center;
-    -webkit-flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
